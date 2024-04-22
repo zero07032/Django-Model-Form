@@ -1,0 +1,23 @@
+<form action="{% url 'blog-create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- title -->
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" placeholder="title" required name="title">
+    </div>
+
+    <!-- image -->
+    <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" class="form-control" required name="image">
+    </div>
+
+    <!-- description -->
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" rows="3" required name="description"></textarea>
+    </div>
+
+    <!-- submit btn -->
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
